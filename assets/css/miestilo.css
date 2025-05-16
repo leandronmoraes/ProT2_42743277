@@ -2,18 +2,74 @@
 body {
     background-color: #eaf2e3;
     color: #333;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 80px;
+    
+}
+
+code, pre {
+  font-family: 'Fira Code', monospace;
+}
+
+.codigo {
+  color: #09bc5d; 
+  font-family: 'Fira Code', monospace;
+}
+
+.roto {
+  color: #ff0000; 
+  font-family: 'Fira Code', monospace;
 }
 
 /*Header*/
 header {
-    background-color: #69bd45;
-    color: #fff;
+    /* background-color: #3881ce; */
+    /* background-image: url(/assets/img/logoprincipal.png); */
+    color: #bd0000;
     text-align: center;
     padding: 20px;
 }
+
+/* ===== Header con imagen de fondo ===== */
+.banner-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Capa oscura encima de la imagen para mejor legibilidad */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Contenido centrado y visible encima del fondo */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+
+
+
 
 /*Section*/
 section {  
@@ -60,7 +116,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #2f8247;
+    background-color: #0b3e96;
 }
 
 /* ---- Caja de texto ---- */
@@ -88,12 +144,12 @@ input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #69bd45;
+    border: 2px solid #0b3e96;
     border-radius: 5px;
 }
 
 input[type="submit"].boton {
-    background-color: #69bd45;
+    background-color: #0b3e96;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -103,7 +159,7 @@ input[type="submit"].boton {
 }
 
 input[type="submit"].boton:hover {
-    background-color: #4caf50;
+    background-color: #0b3e96;
 }
 
 /* ---- Imágenes ---- */
@@ -111,7 +167,7 @@ img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    border: 3px solid #69bd45;
+    border: 3px solid #0b3e96;
     border-radius: 10px;
 }
 
@@ -120,3 +176,100 @@ img {
     height: 200px;
     object-fit: cover;
   }
+
+/* ---- Carrusel ---- */
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+/* ---- Tarjetas ---- */
+  .card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Modo oscuro ---- */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body.dark-mode header {
+  color: #eee;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #444;
+  color: #ddd;
+}
+
+/* Form inputs en modo oscuro */
+body.dark-mode input,
+body.dark-mode .form-control {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.dark-mode input::placeholder {
+  color: #999;
+}
+
+body.dark-mode .input-group-text {
+  background-color: #2a2a2a;
+  color: #ccc;
+  border: 1px solid #555;
+}
+
+body.dark-mode label,
+body.dark-mode .form-check-label,
+body.dark-mode .text-muted {
+  color: #bbb !important;
+}
+
+body.dark-mode .btn-outline-dark {
+  color: #eee;
+  border-color: #888;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+  background-color: #333;
+  border-color: #aaa;
+}
+
+body.dark-mode a {
+  color: #70bfff;
+}
+
+/* Fondo claro normal */
+.fondo-claro {
+  background-color: #f8f9fa; /* similar a bg-light */
+  color: #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+/* Modo oscuro */
+body.dark-mode .fondo-claro {
+  background-color: #1e1e1e; /* fondo oscuro */
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* Cambiar color de iconos en modo oscuro */
+body.dark-mode .fondo-claro i {
+  color: #66b2ff; /* un azul claro para modo oscuro */
+}
+
+/* En modo claro, íconos azules primarios */
+.fondo-claro i {
+  color: #0d6efd; /* bootstrap primary */
+}
+
+body.dark-mode .card img {
+  filter: brightness(0.85);
+}
