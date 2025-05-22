@@ -12,6 +12,7 @@ La aplicación es un blog orientado a la difusión de contenidos relacionados co
 
 ## 📂 Estructura del proyecto
 
+```plaintext
 El proyecto se organiza de la siguiente forma:
 ├── app/
 │   ├── Config/
@@ -43,7 +44,8 @@ El proyecto se organiza de la siguiente forma:
 ├── test/
 ├── writable/
 └── index.php (otros archivos raíz)
-
+```
+---
 ## ⚙️ Funcionalidades principales
 
 Funcionalidades del blog
@@ -63,9 +65,9 @@ Secciones informativas:
 
 
 👤 Autor
-Moraes Leandro
-Estudiante de la Licenciatura en Sistemas de Información
-GitHub: @leandronmoraes
+-Moraes Leandro
+-Estudiante de la Licenciatura en Sistemas de Información
+-GitHub: @leandronmoraes
 
 📄 Licencia
 Este proyecto fue realizado con fines educativos. No posee una licencia de distribución comercial.
