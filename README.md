@@ -1,60 +1,71 @@
-# CodeIgniter 4 Framework
+# 🧠 CódigoRoto - Blog de Programación
 
-## What is CodeIgniter?
+Proyecto desarrollado como parte de un trabajo para el curso [Talentos Digitales].  
+La aplicación es un blog orientado a la difusión de contenidos relacionados con programación y tecnología.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## 🚀 Tecnologías utilizadas
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- [CodeIgniter 4](https://codeigniter.com/) - Framework PHP MVC
+- [PHP 8.3.21 ](https://www.php.net/)
+- [Bootstrap 5.3.6](https://getbootstrap.com/) - Framework CSS para diseño responsive
+- HTML5, CSS3, JavaScript
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 📂 Estructura del proyecto
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+El proyecto se organiza de la siguiente forma:
+├── app/
+│   ├── Config/
+│   ├── Controllers/
+│   ├── Database/
+│   ├── Filters/
+│   ├── Helpers/
+│   ├── Language/
+│   ├── Libraries/
+│   ├── Models/
+│   ├── ThirdParty/
+│   └── Views/
+│       └── front/
+│           ├── acerca_de.php
+│           ├── contacto.php
+│           ├── login.php
+│           ├── principal.php
+│           ├── quienes_somos.php
+│           ├── head_view.php
+│           ├── navbar_view.php
+│           ├── footer_view.php
+│           └── registro.php
+├── assets/
+│   ├── css/
+│   ├── img/
+│   └── js/
+├── public/
+├── system/
+├── test/
+├── writable/
+└── index.php (otros archivos raíz)
 
-## Important Change with index.php
+## ⚙️ Funcionalidades principales
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Funcionalidades del blog
+-Página de inicio con contenido destacado (principal.php)
+-Formulario de registro y login de usuarios
+Secciones informativas:
+-Acerca de
+-Contacto
+-Quiénes somos
+-Interfaz responsive con Bootstrap
+-Organización modular mediante CodeIgniter
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+🖼️ Capturas del sitio
+![image](https://github.com/user-attachments/assets/f415082d-4cd1-464c-92be-c451711828c2)
 
-**Please** read the user guide for a better explanation of how CI4 works!
+![image](https://github.com/user-attachments/assets/34bdb8a5-fe88-4af7-9b04-5019eda56912)
 
-## Repository Management
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+👤 Autor
+Moraes Leandro
+Estudiante de la Licenciatura en Sistemas de Información
+GitHub: @leandronmoraes
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+📄 Licencia
+Este proyecto fue realizado con fines educativos. No posee una licencia de distribución comercial.
