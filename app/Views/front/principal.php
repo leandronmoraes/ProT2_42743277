@@ -86,27 +86,28 @@
   </div>
   <!-- Sección de categorías destacadas -->
 <section class="my-5">
-  <h3>Categorías destacadas</h3>
+  <h3><i class="bi bi-tags"></i> Categorías destacadas</h3>
   <div class="d-flex flex-wrap gap-2">
-    <a href="#" class="btn btn-outline-primary btn-sm">JavaScript</a>
-    <a href="#" class="btn btn-outline-primary btn-sm">Bootstrap</a>
-    <a href="#" class="btn btn-outline-primary btn-sm">PHP</a>
-    <a href="#" class="btn btn-outline-primary btn-sm">Frameworks</a>
-    <a href="#" class="btn btn-outline-primary btn-sm">Tips & Trucos</a>
+    <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide" class="btn btn-outline-primary btn-sm"><i class="bi bi-code-slash"></i> JavaScript</a>
+    <a href="https://getbootstrap.esdocu.com/" class="btn btn-outline-primary btn-sm"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a>
+    <a href="https://www.php.net/manual/es/" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-earmark-code"></i> PHP</a>
+    <a href="https://platzi.com/blog/que-es-framework/" class="btn btn-outline-primary btn-sm"><i class="bi bi-layers"></i> Frameworks</a>
+    <a href="https://platzi.com/blog/6-consejos-para-aprender-a-programar/" class="btn btn-outline-primary btn-sm"><i class="bi bi-lightbulb"></i> Tips & Trucos</a>
   </div>
 </section>
 
+
 <section class="my-5">
-  <h3>Artículos recomendados</h3>
+  <h3><i class="bi bi-bookmark-star"></i> Artículos recomendados</h3>
   <ul class="list-group">
     <li class="list-group-item">
-      <a href="#">5 errores comunes al usar JavaScript y cómo evitarlos</a>
+      <i class="bi bi-journal-code me-2"></i><a href="https://kikesan.medium.com/los-errores-m%C3%A1s-comunes-en-javascript-y-c%C3%B3mo-evitarlos-d19cafd191c5">5 errores comunes al usar JavaScript y cómo evitarlos</a>
     </li>
     <li class="list-group-item">
-      <a href="#">Bootstrap vs Tailwind: ¿cuál elegir?</a>
+      <i class="bi bi-sliders2-vertical me-2"></i><a href="https://www.dreamhost.com/blog/es/tailwind-vs-bootstrap-que-framework-css-necesitas/">Bootstrap vs Tailwind: ¿cuál elegir?</a>
     </li>
     <li class="list-group-item">
-      <a href="#">Cómo empezar con CodeIgniter paso a paso</a>
+      <i class="bi bi-terminal me-2"></i><a href="https://codeigniter.com/user_guide/tutorial/index.html">Cómo empezar con CodeIgniter paso a paso</a>
     </li>
   </ul>
 </section>
@@ -130,15 +131,41 @@
   </div>
 </section>
 
-<section class="my-5 text-center bg-light p-4 rounded shadow-sm">
-  <h4>¿Querés recibir novedades y tips en tu correo?</h4>
-  <p>Suscribite a nuestro boletín y enterate antes que nadie.</p>
+<section class="my-5 text-center bg-light p-4 rounded shadow-sm fondo-claro">
+  <h4><i class="bi bi-envelope-paper-heart"></i> ¿Querés recibir novedades y tips en tu correo?</h4>
+  <p>Suscribite y enterate antes que nadie.</p>
   <form class="d-flex justify-content-center gap-2">
-    <input type="email" class="form-control w-25" placeholder="Tu correo electrónico">
-    <button type="submit" class="btn btn-primary">Suscribirme</button>
+    <input type="email" class="form-control w-25" placeholder="Tu correo electrónico" required>
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-send-fill me-1"></i> Suscribirme
+    </button>
   </form>
+
+  <!-- Alerta Bootstrap oculta inicialmente -->
+  <div id="alertaSuscripcion" class="alert alert-success mt-3 d-none" role="alert">
+    Gracias por suscribirte, pronto recibirás nuestro contenido.
+  </div>
 </section>
 
+<!-- Script para controlar el envío del formulario y mostrar la alerta -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.fondo-claro form');
+    const alerta = document.getElementById('alertaSuscripcion');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alerta.classList.remove('d-none'); 
+      form.reset();
+  
+
+      // Oculta automáticamente la alerta después de 5 segundos
+      setTimeout(() => {
+        alerta.classList.add('d-none');
+      }, 5000);
+    });
+  });
+</script>
 
 
   <!-- Botón de registro --> 

@@ -1,4 +1,6 @@
-/*General*/
+/* 
+   Estilos Generales
+ */
 body {
     background-color: #eaf2e3;
     color: #333;
@@ -6,24 +8,33 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 80px;
-    
 }
 
 code, pre {
-  font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code', monospace;
 }
 
 .codigo {
-  color: #09bc5d; 
-  font-family: 'Fira Code', monospace;
+    color: #09bc5d;
+    font-family: 'Fira Code', monospace;
 }
 
 .roto {
-  color: #ff0000; 
-  font-family: 'Fira Code', monospace;
+    color: #ff0000;
+    font-family: 'Fira Code', monospace;
 }
 
-/*Header*/
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border: 3px solid #0b3e96;
+    border-radius: 10px;
+}
+
+/* 
+   Header y Banner
+ */
 header {
     /* background-color: #3881ce; */
     /* background-image: url(/assets/img/logoprincipal.png); */
@@ -32,64 +43,42 @@ header {
     padding: 20px;
 }
 
-/* ===== Header con imagen de fondo ===== */
 .banner-header {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 300px;
-  position: relative;
-  overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Capa oscura encima de la imagen para mejor legibilidad */
 .banner-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
 }
 
-/* Contenido centrado y visible encima del fondo */
 .banner-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
 }
 
+/* Efecto hover en logo de navbar */
 .navbar-brand img {
-  transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .navbar-brand img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    transform: scale(1.05);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
-
-
-
-
-/*Section*/
-section {  
-    padding: 20px; /* espaciado para la sección de 20 pixeles */
-}  
-
-footer {  
-    background-color: #4caf50; /* Color de fondo del footer */  
-    color: #fff;  
-    padding: 20px 0; 
-}  
-
-.footer-content {  
-    max-width: 800px; /* Ancho máximo del contenido del footer */  
-    margin: 0 auto; /* Centrar el contenido del footer horizontalmente */  
-    text-align: center; 
-}  
-
-
-/* ---- Nav ---- */
+/* 
+   Navegación (Nav)
+ */
 nav {
     background-color: #4caf50;
     padding: 10px;
@@ -112,14 +101,41 @@ nav ul li a {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* transición suave */
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #0b3e96;
 }
 
-/* ---- Caja de texto ---- */
+.navbar-nav .nav-link i {
+  vertical-align: middle; /* que queden centrados verticalmente */
+  font-size: 1.1rem; /* tamaño un poco mayor para destacar */
+}
+
+
+/* 
+   Secciones generales
+ */
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 
+   Caja de texto y párrafos
+ */
 .cajaTexto {
     background-color: lightyellow;
     border: 2px solid orange;
@@ -128,148 +144,356 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-/* ---- Párrafo personalizado ---- */
 .textoPersonalizado {
     text-align: center;
     font-weight: bold;
     font-style: italic;
 }
 
-/* ---- Formulario de contacto ---- */
+/* 
+   Formularios (Contacto)
+ */
 .formularioContacto {
-    margin-top: 30px;
+    max-width: 500px;
+    margin: 2rem auto 4rem;
+    background-color: #f9f9f9;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Inter', sans-serif;
 }
 
-input[type="text"], input[type="email"], textarea {
+.formularioContacto h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0b3e96;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.formularioContacto form input[type="text"],
+.formularioContacto form input[type="email"],
+.formularioContacto form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px 15px;
+    margin-bottom: 1.2rem;
     border: 2px solid #0b3e96;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease;
 }
 
-input[type="submit"].boton {
+.formularioContacto form input[type="text"]:focus,
+.formularioContacto form input[type="email"]:focus,
+.formularioContacto form textarea:focus {
+    outline: none;
+    border-color: #0665d0;
+    box-shadow: 0 0 8px rgba(6, 101, 208, 0.4);
+    background-color: #fff;
+}
+
+.formularioContacto form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.formularioContacto form input[type="submit"].boton {
     background-color: #0b3e96;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-input[type="submit"].boton:hover {
-    background-color: #0b3e96;
+.formularioContacto form input[type="submit"].boton:hover {
+    background-color: #06407a;
 }
 
-/* ---- Imágenes ---- */
-img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    border: 3px solid #0b3e96;
-    border-radius: 10px;
+.formularioContacto form button.btn-secondary {
+    width: 100%;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #6c757d;
+    color: white;
 }
 
-/* ---- Post ---- */
+.formularioContacto form button.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* 
+   Post, Carrusel y Tarjetas
+ */
 .img-post {
     height: 200px;
     object-fit: cover;
-  }
+}
 
-/* ---- Carrusel ---- */
 .carousel-inner img {
     height: 400px;
     object-fit: cover;
-  }
-
-/* ---- Tarjetas ---- */
-  .card:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* ---- Modo oscuro ---- */
+.card:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+   Botones de Categorías Destacadas
+ */
+.btn-outline-primary.btn-sm {
+    font-weight: bold;
+    border-width: 2px;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary.btn-sm:hover {
+    background-color: #0b3e96;
+    color: white;
+}
+
+/* 
+   Estilos para Artículos Recomendados
+*/
+.list-group-item a {
+    text-decoration: none;
+    color: #0b3e96;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.list-group-item a:hover {
+    color: #0056b3;
+}
+
+/* 
+   Sección Suscripción
+ */
+.suscripcion {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 
+   Modo Oscuro
+ */
 body.dark-mode {
-  background-color: #121212;
-  color: #ddd;
+    background-color: #121212;
+    color: #ddd;
 }
 
 body.dark-mode header {
-  color: #eee;
+    color: #eee;
 }
 
 body.dark-mode .card {
-  background-color: #1e1e1e;
-  border-color: #444;
-  color: #ddd;
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: #ddd;
 }
 
-/* Form inputs en modo oscuro */
+body.dark-mode .card img {
+    filter: brightness(0.85);
+}
+
 body.dark-mode input,
 body.dark-mode .form-control {
-  background-color: #2a2a2a;
-  color: #f0f0f0;
-  border: 1px solid #555;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #555;
 }
 
 body.dark-mode input::placeholder {
-  color: #999;
+    color: #999;
 }
 
 body.dark-mode .input-group-text {
-  background-color: #2a2a2a;
-  color: #ccc;
-  border: 1px solid #555;
+    background-color: #2a2a2a;
+    color: #ccc;
+    border: 1px solid #555;
 }
 
 body.dark-mode label,
 body.dark-mode .form-check-label,
 body.dark-mode .text-muted {
-  color: #bbb !important;
+    color: #bbb !important;
 }
 
 body.dark-mode .btn-outline-dark {
-  color: #eee;
-  border-color: #888;
+    color: #eee;
+    border-color: #888;
 }
 
 body.dark-mode .btn-outline-dark:hover {
-  background-color: #333;
-  border-color: #aaa;
+    background-color: #333;
+    border-color: #aaa;
 }
 
 body.dark-mode a {
-  color: #70bfff;
+    color: #70bfff;
 }
 
-/* Fondo claro normal */
-.fondo-claro {
-  background-color: #f8f9fa; /* similar a bg-light */
-  color: #333;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  padding: 1.5rem;
-}
-
-/* Modo oscuro */
 body.dark-mode .fondo-claro {
-  background-color: #1e1e1e; /* fondo oscuro */
-  color: #ddd;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    background-color: #1e1e1e;
+    color: #ddd;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
 
-/* Cambiar color de iconos en modo oscuro */
 body.dark-mode .fondo-claro i {
-  color: #66b2ff; /* un azul claro para modo oscuro */
+    color: #66b2ff;
 }
 
-/* En modo claro, íconos azules primarios */
+body.dark-mode .list-group-item {
+    background-color: #1e1e1e;
+    color: #ddd;
+    border-color: #333;
+}
+
+body.dark-mode .list-group-item a {
+    color: #70bfff;
+}
+
+body.dark-mode .list-group-item a:hover {
+    color: #a5d8ff;
+}
+
+body.dark-mode .suscripcion {
+    background-color: #1e1e1e;
+    color: #ddd;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .suscripcion input {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+body.dark-mode .suscripcion input::placeholder {
+    color: #aaa;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #0b3e96;
+    border-color: #0b3e96;
+    color: #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #08408c;
+    border-color: #08408c;
+    color: white;
+}
+
+body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+    color: #ddd !important;
+}
+
+/* 
+   Fondo Claro (común)
+ */
+.fondo-claro {
+    background-color: #f8f9fa; /* similar a bg-light */
+    color: #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
 .fondo-claro i {
-  color: #0d6efd; /* bootstrap primary */
+    color: #0d6efd; /* bootstrap primary */
 }
 
-body.dark-mode .card img {
-  filter: brightness(0.85);
+/* Ajustes para formularioContacto en modo oscuro */
+body.dark-mode .formularioContacto {
+  background-color: #1e1e1e; /* Fondo oscuro suave para el formulario */
+  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+  color: #ddd;
+}
+
+body.dark-mode .formularioContacto input[type="text"],
+body.dark-mode .formularioContacto input[type="email"],
+body.dark-mode .formularioContacto textarea {
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 2px solid #444; /* borde más visible */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .formularioContacto input[type="text"]::placeholder,
+body.dark-mode .formularioContacto input[type="email"]::placeholder,
+body.dark-mode .formularioContacto textarea::placeholder {
+  color: #999;
+}
+
+body.dark-mode .formularioContacto input[type="text"]:focus,
+body.dark-mode .formularioContacto input[type="email"]:focus,
+body.dark-mode .formularioContacto textarea:focus {
+  border-color: #0b3e96;
+  box-shadow: 0 0 8px rgba(11, 62, 150, 0.7);
+  background-color: #222;
+  outline: none;
+}
+
+/* Validación - mensajes invalid-feedback en modo oscuro */
+body.dark-mode .formularioContacto .invalid-feedback {
+  color: #f88; /* rojo claro para error */
+}
+
+/* Botones */
+body.dark-mode .formularioContacto form input[type="submit"].boton {
+  background-color: #0b3e96;
+  color: #ddd;
+  border: none;
+}
+
+body.dark-mode .formularioContacto form input[type="submit"].boton:hover {
+  background-color: #08408c;
+  color: white;
+}
+
+body.dark-mode .formularioContacto form button.btn-secondary {
+  background-color: #555;
+  color: #ccc;
+  border: none;
+}
+
+body.dark-mode .formularioContacto form button.btn-secondary:hover {
+  background-color: #444;
+  color: #eee;
+}
+
+body.dark-mode a.btn-success {
+  background-color: #198754; /* un verde oscuro bootstrap más sólido */
+  color: #ddd; /* texto claro para buen contraste */
+  border-color: #157347; /* borde acorde */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode a.btn-success:hover,
+body.dark-mode a.btn-success:focus {
+  background-color: #157347; /* más oscuro al hover */
+  color: white;
+}
+
+.btn-primary i {
+  color: white;
+  vertical-align: middle;
 }
